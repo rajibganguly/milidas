@@ -1,0 +1,295 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+
+/*
+**
+**  Author: Rajib Ganguly 
+**  Website: MILIDAS.DAS
+**  Date: 01/08/2021
+**  @GLOBAL | @PAGES | @MEDIAQUERY | @OVERWRIITEN
+*/
+
+@import 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css';
+@import './assets/css/bootstrap-icon.css';
+
+// @import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Galada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Galada&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+
+$bgColor: #ede0b4;
+$primary-color: #663008;
+$secondary-color: #f1bb02;
+$superdark-color: #1d0d01;
+
+//FONT SIZES
+@mixin font-size($size) {
+    font-size: $size;
+}
+
+@mixin cursive { 
+    font-family: 'Style Script', cursive;
+}
+
+@mixin bengali-font-galda { 
+    font-family: 'Galada', cursive;
+}
+
+@mixin bengali-font-baloo {
+    font-family: 'Baloo Da 2', cursive;
+}
+@mixin roboto($f-w) {
+    font-family: 'Roboto', sans-serif;
+    font-weight: $f-w;
+}
+
+
+/* GLOBAL */
+body {
+    background: $bgColor url('./assets/img/bg.png') center top no-repeat;
+}
+.section-title {
+    @include font-size(2.4em);
+    @include roboto(300);
+    color: $primary-color;
+    margin: 2%;
+}
+.page {
+    min-height: 700px;
+    .page-title {
+        @include font-size(3em);
+        color: $primary-color;
+        @include roboto(400);
+    }
+    .eng-sub-title {
+        @include font-size(2em);
+        color: $primary-color;
+        @include roboto(200);
+    }
+    .ben-sub-title {
+        @include font-size(2em);
+        color: $primary-color;
+        @include bengali-font-baloo();
+    }
+}
+.hamburger {
+    color:$primary-color;
+    padding: 20px;
+    @include font-size(2em);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+}
+.min-height {
+    min-height:700px;
+    .set-pad {
+        padding:5%;
+    }
+}
+.title-cursive {
+    @include cursive();
+    @include font-size(2em);
+    color: $primary-color;
+}
+.modal {
+    display:block;
+}
+.spl-box {
+    background: darken($color: $bgColor, $amount: 2%);
+    border-color: lighten($color: $primary-color, $amount: 10%)
+}
+
+
+/* PAGES */
+.menu {
+    @include font-size(2em);
+    padding: 0;
+    li {
+        padding: 0px;
+        margin: 0 auto;
+        list-style: none;
+        width: 257px;
+        text-align: center;
+        a {
+            color: $primary-color;
+            text-decoration: none;
+        }
+    }
+}
+
+/* ---------------------- HOME 1  ------------------*/
+.milid {
+    background: url('./assets/img/milidas.png') no-repeat;
+    padding: 10% 20px 10% 50%;
+    height: 778px;
+    position: relative;
+    text-align: center;
+    .bangla {
+        @include bengali-font-galda();
+        &.spl-text {
+            margin: 12%;
+            text-align: center;
+            color: $primary-color;
+            @include font-size(1.2em);
+        }
+    }
+    .title {
+        @include roboto(800);
+        color: darken($color: $primary-color, $amount: 10);
+        @include font-size(1.5em);
+        margin: 10px 0;
+        height: 135px;
+        span {
+            @include roboto(500);
+            @include font-size(0.8em); 
+            display:block;
+        }
+    }
+    .para {
+        padding: 40px 0;
+        position: relative;
+        color: $primary-color;
+        text-align: center;
+        &:before {
+            content: url('./assets/img/para-line.png');
+            transform: rotate(-180deg);
+            position:absolute;
+            left: 37%;
+            top:0;
+        }
+        &:after {
+            content: url('./assets/img/para-line.png');
+            position:absolute;
+            left: 37%;
+            bottom:0;
+        }
+    }
+    .social-media {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        a {
+            margin:2px;
+        }
+    }
+    p {
+        span {
+            display: block;
+            @include font-size(0.75em);
+        }
+    }
+}
+/* ---------------------- HOME 2  ------------------*/
+.brown-section {
+    background: $primary-color;
+    .set-device {
+        margin: 5%;
+    }
+    .title {
+        @include roboto(200);
+        color: $secondary-color;
+        @include font-size(2.4em);
+        margin: 8% 0;
+        height: 100px;
+    }
+    p {
+        height: 100px;
+        color: $secondary-color; 
+    }
+
+    button {
+        &.btn-secondary {
+            background: $secondary-color;
+            color: $primary-color;
+        &:hover {
+            background: darken($color: $secondary-color, $amount: 10);
+            }
+        }
+    }
+    .appearence {
+        padding: 40px 0;
+        position: relative;
+        color: $primary-color;
+        text-align: center;
+        &:before {
+            content: url('./assets/img/para-line-light.png');
+            transform: rotate(-180deg);
+            position:absolute;
+            left: 31%;
+            top:0;
+        }
+        &:after {
+            content: url('./assets/img/para-line-light.png');
+            position:absolute;
+            left: 31%;
+            bottom:0;
+        }
+    }
+}
+
+/* --------------------  HOME 3 ----------------------- */
+.books-buy {
+    position: relative;
+    text-align: center;
+    .set-device {
+        padding-bottom: 5%;
+    }
+    .appearence {
+        padding: 40px 0;
+        position: relative;
+        color: $primary-color;
+        text-align: center;
+        img {
+           border:1px solid $secondary-color;
+        }
+        &:before {
+            content: url('./assets/img/para-line.png');
+            transform: rotate(-180deg);
+            position:absolute;
+            left: 15%;
+            top:0;
+        }
+        &:after {
+            content: url('./assets/img/para-line.png');
+            position:absolute;
+            left: 15%;
+            bottom:0;
+        }
+    }
+    button {
+        &.btn-primary {
+            background: $primary-color;
+            color: $secondary-color;
+        &:hover {
+            background: darken($color: $primary-color, $amount: 10);
+            }
+        }
+    }
+}
+
+footer {
+    color:darkkhaki;
+    background: darken($color: $superdark-color, $amount: 1);
+}
+
+
+/* MEDIAQUERY */
+
+/* OVERWRITTEN  */
+.btn {
+    border: none;
+    border-radius: 0;
+} 
+.btn-primary {
+    background: $primary-color;
+    &:hover {
+        background: darken($color: $primary-color, $amount: 10);
+    }
+}
+.btn-secondary {
+    background: $secondary-color;
+    &:hover {
+        background: darken($color: $secondary-color, $amount: 10);
+    }
+}
