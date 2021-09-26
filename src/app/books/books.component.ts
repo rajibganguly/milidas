@@ -12,8 +12,77 @@ export class BooksComponent implements OnInit {
   hideDetails: boolean = true;
   currentBooks;
   title: string;
+  showModel = false;
+  newImage = '';
   // books:[];
-
+  anthology = [
+    {
+      image: './../../assets/img/anthology/anthology_100.jpg',
+      thumbnail: './../../assets/img/anthology/anthology.png',
+    },
+    {
+      image: './../../assets/img/anthology/anthology_102.jpg',
+      thumbnail: './../../assets/img/anthology/anthology.png',
+    },
+    {
+      image: './../../assets/img/anthology/anthology_103.jpg',
+      thumbnail: './../../assets/img/anthology/anthology.png',
+    },
+    {
+      image: './../../assets/img/anthology/anthology_104.jpg',
+      thumbnail: './../../assets/img/anthology/anthology.png',
+    },
+    {
+      image: './../../assets/img/anthology/anthology_105.jpg',
+      thumbnail: './../../assets/img/anthology/anthology.png',
+    },
+    {
+      image: './../../assets/img/anthology/anthology_106.jpg',
+      thumbnail: './../../assets/img/anthology/anthology.png',
+    },
+    {
+      image: './../../assets/img/anthology/anthology_107.jpg',
+      thumbnail: './../../assets/img/anthology/anthology.png',
+    },
+    {
+      image: './../../assets/img/anthology/anthology_108.jpg',
+      thumbnail: './../../assets/img/anthology/anthology.png',
+    },
+    {
+      image: './../../assets/img/anthology/anthology_109.jpg',
+      thumbnail: './../../assets/img/anthology/anthology.png',
+    },
+    {
+      image: './../../assets/img/anthology/anthology_110.jpg',
+      thumbnail: './../../assets/img/anthology/anthology.png',
+    }
+  ]
+  anthologyAmerica = [
+    {
+      image: './../../assets/img/anthology/anthology_200.jpg',
+      thumbnail: './../../assets/img/anthology/anthology.png',
+    },
+    {
+      image: './../../assets/img/anthology/anthology_201.jpg',
+      thumbnail: './../../assets/img/anthology/anthology.png',
+    },
+    {
+      image: './../../assets/img/anthology/anthology_202.jpg',
+      thumbnail: './../../assets/img/anthology/anthology.png',
+    },
+    {
+      image: './../../assets/img/anthology/anthology_203.jpg',
+      thumbnail: './../../assets/img/anthology/anthology.png',
+    },
+    {
+      image: './../../assets/img/anthology/anthology_204.jpg',
+      thumbnail: './../../assets/img/anthology/anthology.png',
+    },
+    {
+      image: './../../assets/img/anthology/anthology_205.jpg',
+      thumbnail: './../../assets/img/anthology/anthology.png',
+    }
+  ]
   books = [
     {
       id: 1,
@@ -138,6 +207,16 @@ export class BooksComponent implements OnInit {
   returnBack() {
     this.hideDetails = true;
     this.currentBooks = [];
+  }
+
+  checkStand(ob) {
+    console.log(ob);
+    this.showModel = true;
+    this.newImage = ob.image;
+  }
+
+  close() {
+    this.showModel = false;
   }
 
 }

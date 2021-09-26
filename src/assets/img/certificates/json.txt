@@ -1,0 +1,59 @@
+awards = [
+  {
+image: "awards1.jpg",
+text: "2021 IQRA Foundation"
+},
+{
+image: "awards2.jpg",
+text: "2021 Poet of week - Your eyes"
+},
+{
+image: "awards3.jpg",
+text: "2022 Oxygen Pen"
+},
+{
+image: "awards4.jpg",
+text: "2020 International Online Cultural Festival"
+},
+{
+image: "awards5.jpg",
+text: "2021 Precious Gem"
+},
+{
+image: "awards6.jpg",
+text: "Association of Artists and Writers of the World"
+},
+{
+image: "awards7.jpg",
+text: "2021 World Library Forum"
+},
+{
+image: "awards8.jpg",
+text: "2021 Members Choice"
+},
+{
+image: "awards9.jpg",
+text: "2021 Poetry Centre"
+},
+{
+image: "awards10.jpg",
+text: "2021 Cping with COVID"
+},
+{
+image: "awards11.jpg",
+text: "2021 Cristian Camilo Serna Villada"
+},
+{
+image: "awards12.jpg",
+text: "2021 Mother Global Peace Award"
+},
+{
+image: "awards13.jpg",
+text: "All India poetess conference certificate, Karnataka"
+},
+{
+image: "awards14.jpg",
+text: "Certificate for Poetry from COLOMBIA"
+}
+
+]

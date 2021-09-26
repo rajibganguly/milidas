@@ -50,7 +50,7 @@ body {
     background: $bgColor url('./assets/img/bg.png') center top no-repeat;
 }
 .section-title {
-    @include font-size(2.4em);
+    @include font-size(3.4em);
     @include roboto(300);
     color: $primary-color;
     margin: 2%;
@@ -110,10 +110,18 @@ body {
         margin: 0 auto;
         list-style: none;
         width: 257px;
-        text-align: center;
+        text-align: left;
         a {
             color: $primary-color;
             text-decoration: none;
+            &:hover {
+                text-shadow: 0 0 5px lighten($primary-color, 50);
+            }
+        }
+        &:hover {
+            background: rgba(255, 254, 255, 0.2);
+            border-bottom: 2px dashed $secondary-color;
+            border-top: 2px dashed $secondary-color;
         }
     }
 }
@@ -125,6 +133,7 @@ body {
     height: 778px;
     position: relative;
     text-align: center;
+    width: 100%;
     .bangla {
         @include bengali-font-galda();
         &.spl-text {
@@ -180,6 +189,12 @@ body {
         }
     }
 }
+.border-radius {
+    border-radius: 0 100%;
+}
+.reverse-border-radius {
+    border-radius: 100% 0;
+}
 /* ---------------------- HOME 2  ------------------*/
 .brown-section {
     background: $primary-color;
@@ -189,7 +204,7 @@ body {
     .title {
         @include roboto(200);
         color: $secondary-color;
-        @include font-size(2.4em);
+        @include font-size(3.4em);
         margin: 8% 0;
         height: 100px;
     }
@@ -268,18 +283,66 @@ body {
     }
 }
 
+.cors {
+    cursor: pointer;
+    /*height: 190px;*/
+
+    text-align: center;
+    background: rgba(255, 254, 255, 0.2) !important;
+    
+    img {
+        &:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
+figure {
+    img {
+        -webkit-transition: 1s linear;
+  transition: 1s linear;
+        &:hover {
+            transform: rotate(-2deg);
+            -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+        }
+    }
+}
+
+
 footer {
     color:darkkhaki;
     background: darken($color: $superdark-color, $amount: 1);
+
+    .cursive {
+        @include cursive();
+        @include font-size(3em);
+    }
+    ul, li {
+        list-style-type: none;
+    }
 }
 
 
 /* MEDIAQUERY */
 
+@media screen and (min-width: 0) and (max-width: 600px) {
+    .milid {
+        background: url(./assets/img/milidas.png) -156px 0 no-repeat;
+        padding: 10% 20px 10% 10%;
+        height: 778px;
+        position: relative;
+        text-align: center;
+        width: 100%;
+    }
+}
+
 /* OVERWRITTEN  */
 .btn {
     border: none;
-    border-radius: 0;
+    border-radius: 0 8px !important;
+    text-transform: uppercase;
+    padding: 6px 26px;
 } 
 .btn-primary {
     background: $primary-color;

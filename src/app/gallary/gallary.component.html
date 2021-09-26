@@ -2,19 +2,30 @@
     <div class="title p-4">
         <h4 class="title-cursive"><i class="bi bi-journal-check"></i> Gallery Pictures ...</h4>
 
+        <!-- Page Header -->
         <div class="mt-4 mb-4 d-flex justify-content-center">
-          <img src="./../../assets/img/gallery_banner.jpg" class="img-fluid" />
-        </div>
+            <div class="row p-4 border mt-4 mb-4 border-secondary">
+                <div class="col-xl-8 col-xs-12" style="font-size: 1.3rem;
+                line-height: 2.4rem;">
+                  <strong style="font-size:2rem;">Gallery: </strong><br> Photos captures every moment of memory in the pages of mind.<br><br>
+                  Happiness, sadness, joy and moments of love can be felt by touching through photos.Photography is an art of observation.Photo gallery is a memory of the past that is an invaluable resource for our future
+                </div>
+                <div class="col-xl-4 col-xs-12">
+                  <img src="./../../assets/img/milidas-gallary.jpg" alt="milidas images" class="img-fluid" />
+                </div>
+            </div>
+          </div>
         
+          <!-- Page Body -->
+        <p>Total {{gallary.length}} images.</p>
         <div class="row mt-4">
-            <div class="col-xl-4 col-lg-4 col-sm-6 col-xs-12">
+            <div class="col-xl-4 col-lg-4 col-sm-6 col-xs-12 mb-4" *ngFor="let img of gallary">
                 <div class="card animate__animated animate__bounce ">
                     <div class="card-body">
                         <figure>
-                            <img src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YXJ0JTIwZ2FsbGVyeXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="milidas images" class="img-fluid" />
-                            <figcaption>Gallary</figcaption>
+                            <img [src]="img.image" alt="milidas images" class="img-fluid" />
+                            <figcaption>{{img.text}}</figcaption>
                         </figure>
-                        <a [routerLink]="['/gallary']" class="card-link">Details</a>
                     </div>
                 </div>
 

@@ -33,7 +33,8 @@ import { AuthorService } from './author.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    //HttpClientModule
   ],
   providers: [ AuthorService ],
   bootstrap: [AppComponent]

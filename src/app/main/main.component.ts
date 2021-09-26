@@ -7,18 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
  
-miliText1 = `Mili Das is a bilingual poet and writer from 
-Kolkata,West Bengal, India.She is a symbol 
-that no obstacle in life can hold anyone back.
-She is a eminent recipe writer of West Bengal. 
-She attended various Television programs on 
-national as well as local Television channels.`
+miliText1 = `Mili Das is a bilingual poet and writer from Kolkata, West Bengal, India. 
+She is a symbol that no obstacle in life can hold anyone back. She is a eminent recipe writer of West Bengal and abroad. She attended  
+various Television programs on national as well as local Television channels.`
 miliText2 = `
-She is invited as a judge of various cooking 
-competitions.She herself is the inspiration of 
-her own life.Her poetry proves,her writing style 
-is of a completely different genre which is 
-completely her own,doesn't match with anyone.`;
+She is invited as a judge of various cooking competitions. She herself is the inspiration of her own life.  Her poetry 
+proves her wiring style is of a completely different genre which is completely her own, doesn't match with anyone.`;
 
 listsOfBooks = [
   {
